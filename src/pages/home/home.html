@@ -1,14 +1,29 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Drag & Drop
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-row>
+    <ion-col col-6 class="left">
+      <div class="header">First Bucket</div>
+      <ion-list [dragula]='"my-bag"' [dragulaModel]="q1">
+        <button ion-item *ngFor="let item of q1" detail-none>
+          {{item}}
+        </button>
+      </ion-list>
+    </ion-col>
+
+    <ion-col col-6 class="right">
+      <div class="header">Second Bucket</div>
+      <ion-list [dragula]='"my-bag"' [dragulaModel]="q2">
+        <button ion-item *ngFor="let item of q2" detail-none>
+          {{item}}
+        </button>
+      </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>
