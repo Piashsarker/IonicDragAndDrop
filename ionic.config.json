@@ -1,0 +1,8 @@
+{
+  "name": "drag-and-drop",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
